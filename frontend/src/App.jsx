@@ -1,10 +1,15 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import "prismjs/themes/prism-tomorrow.css"
 import "prismjs/components/prism-jsx"
+import prism from "prismjs"
 import './App.css'
 
 function App() {
   const [count, setCount] = useState(0)
+
+  useEffect(()=>{
+    prism.highlightAll()
+  })
 
   return (
     <>
@@ -18,5 +23,7 @@ function App() {
     </>
   )
 }
+
+
 
 export default App
